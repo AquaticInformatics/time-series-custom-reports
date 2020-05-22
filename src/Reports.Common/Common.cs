@@ -739,6 +739,8 @@ namespace Reports
 
         public List<TimeAlignedPoint> GetTimeAlignedPoints(List<Guid> inputGuids, DateTimeOffset? StartTime, DateTimeOffset? EndTime)
         {
+            Log.Debug($"Doug was here");
+
             Log.DebugFormat("GetTimeAlignedPoints number of guids='{0}', from start = {1} to end = {2}", inputGuids.Count,
                 (StartTime.HasValue) ? StartTime.Value.ToString(_DateFormat) : "start of record",
                 (EndTime.HasValue) ? EndTime.Value.ToString(_DateFormat) : "end of record");
